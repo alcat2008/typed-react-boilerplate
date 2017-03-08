@@ -1,0 +1,23 @@
+{
+  "name": "typed-react-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate to start react project using typescript.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alcat2008/typed-react-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "frontend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alcat2008/typed-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/alcat2008/typed-react-boilerplate#readme"
+}
