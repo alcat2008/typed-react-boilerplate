@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
     "strictNullChecks": true,
+    "declaration": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "jsx": "preserve",
-    "target": "es6"
+    "target": "es6",
+    "outDir": "./dist/"
   },
+  "include": [
+    "./src/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]
