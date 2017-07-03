@@ -9,8 +9,7 @@ ReactDOM.render(
   document.getElementById('root') as HTMLElement
 );
 
-declare const __DEV__: boolean;
-// expose React and Perf for __DEV__
+
 if (__DEV__) {
   const Perf = require('react-addons-perf');
 

@@ -2,7 +2,6 @@
   "name": "typed-react-boilerplate",
   "version": "0.1.0",
   "description": "Boilerplate to start react project using typescript.",
-  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alcat2008/typed-react-boilerplate.git"
