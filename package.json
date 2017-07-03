@@ -11,7 +11,6 @@
     "react",
     "typescript"
   ],
-  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alcat2008/typed-react-boilerplate/issues"
@@ -37,12 +36,18 @@
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "0.11.1",
     "fs-extra": "3.0.1",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "2.28.0",
-    "jest": "20.0.3",
+    "jest": "^20.0.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "lesshint": "^3.3.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.5",
+    "precommit-hook-eslint": "^3.0.0",
     "promise": "7.1.1",
+    "react-addons-perf": "^15.4.2",
     "react-dev-utils": "^2.0.1",
     "react-error-overlay": "^1.0.6",
     "style-loader": "0.17.0",
@@ -61,7 +66,13 @@
   "scripts": {
     "start": "node bin/start.js",
     "build": "node bin/build.js",
-    "test": "node bin/test.js --env=jsdom"
+    "test": "node bin/test.js --env=jsdom",
+    "tslint": "tslint ./src",
+    "lesshint": "lesshint src/styles -r config/lesshint-report.js",
+    "lint": "npm run tslint && npm run lesshint",
+    "validate": "npm ls",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build --message='feat: Updates gh-pages'"
   },
   "jest": {
     "mapCoverage": true,
@@ -95,5 +106,9 @@
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
-  }
+  },
+  "author": "ge_yangyang@126.com",
+  "pre-commit": [
+    "lint"
+  ]
 }
