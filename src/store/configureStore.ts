@@ -5,13 +5,13 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { hashHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 import thunkMiddleware from 'redux-thunk';
-import promiseMiddleware from 'redux-promise';
+import * as promiseMiddleware from 'redux-promise';
 
 import rootReducer from '../reducers';
 const middleware = [routerMiddleware(hashHistory), thunkMiddleware, promiseMiddleware];
 
-export default function configureStore(initialState, onComplete?: () => void) {
-  let finalCreateStore;
+export default function configureStore(initialState: Object, onComplete?: () => void) {
+  let finalCreateStore: any;
   let devEnhancer;
   if (__PROD__) {
     finalCreateStore = applyMiddleware(...middleware)(createStore);
@@ -29,7 +29,7 @@ export default function configureStore(initialState, onComplete?: () => void) {
   }
 
   const store = finalCreateStore(rootReducer, initialState, devEnhancer);
-  onComplete && onComplete();
+  onComplete && onComplete(); // tslint:disable-line
 
   // Hot reload reducers (requires Webpack or Browserify HMR to be enabled)
   // if (module.hot) {

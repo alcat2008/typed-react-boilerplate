@@ -1,8 +1,9 @@
 /**
  * Created by alcat on 04/07/2017.
  */
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
+import './not-found.less';
 
 export default function NotFound() {
   return (

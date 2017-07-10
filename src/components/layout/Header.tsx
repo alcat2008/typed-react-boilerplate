@@ -1,9 +1,10 @@
 /**
  * Created by alcat on 04/07/2017.
  */
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
-import classNames from 'classnames';
+import * as classNames from 'classnames';
+import './header.less';
 
 export interface HeaderProps {
   location?: any;

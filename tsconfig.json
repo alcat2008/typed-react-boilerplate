@@ -1,17 +1,22 @@
 {
   "compilerOptions": {
-    "strictNullChecks": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "jsx": "preserve",
-    "noUnusedParameters": true,
-    "noUnusedLocals": true,
+    "outDir": "build/dist",
+    "module": "commonjs",
     "target": "es6",
-    "lib": [
-      "dom",
-      "es7"
-    ]
+    "lib": ["es7", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true
   },
   "files": [
     "./typings/index.d.ts"

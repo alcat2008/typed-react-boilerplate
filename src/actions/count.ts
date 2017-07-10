@@ -1,6 +1,6 @@
 
 import * as ReduxActions from 'redux-actions';
-import { INCREASE, DECREASE } from '../constant/dictActions';
+import * as actions from '../constant/dictActions';
 
 const { createAction } = ReduxActions;
 
@@ -21,7 +21,7 @@ function isNetworkFailure() {
  * see http://facebook.github.io/react-native/docs/network.html
  */
 // eslint-disable-next-line
-function _makeSimulatedNetworkRequest(getValue): Promise<any> {
+function _makeSimulatedNetworkRequest(getValue: any): Promise<any> {
   const durationMs = 400;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -34,14 +34,14 @@ function _makeSimulatedNetworkRequest(getValue): Promise<any> {
   });
 }
 
-export const increase: ReduxActions.ActionFunction1<number, Object> = createAction(INCREASE);
-export const decrease: ReduxActions.ActionFunction1<number, Object> = createAction(DECREASE);
-export const increaseAsync = (count: number) => dispatch => {
+export const increase: any = createAction(actions.INCREASE);
+export const decrease: any = createAction(actions.DECREASE);
+export const increaseAsync = (count: number) => (dispatch: any) => {
   setTimeout(() => {
     dispatch(increase(count));
   }, 1000);
 };
 export const increaseByRequest = (count: number) =>
-  _makeSimulatedNetworkRequest((resolve) => {
+  _makeSimulatedNetworkRequest((resolve: any) => {
     resolve(increase(count));
   });

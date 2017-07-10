@@ -1,37 +1,42 @@
-@import "../styles/base/index";
+@import "../styles/index";
 
-.jump {
-  a {
-    text-decoration: underline;
+@home-prefix-cls: ~"home";
+
+.@{home-prefix-cls} {
+  &-jump {
+    a {
+      text-decoration: underline;
+    }
   }
-}
 
-.count {
-  font-size: 3rem;
-  text-align: center;
-  color: @legend-color;
-  margin: 1rem;
-}
+  &-count {
+    font-size: 3rem;
+    text-align: center;
+    color: @legend-color;
+    margin: 1rem;
+  }
 
-.operator {
-  button {
-    margin: .4em;
-    padding: 1em;
-    cursor: pointer;
-    background: #e1e1e1;
-    text-decoration: none;
-    color: #666666;
-    /* Prevent highlight colour when element is tapped */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &-operator {
+    button {
+      margin: .4em;
+      padding: 1em;
+      cursor: pointer;
+      background: #e1e1e1;
+      text-decoration: none;
+      color: #666666;
+      /* Prevent highlight colour when element is tapped */
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-    /* Smooth fonts */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+      /* Smooth fonts */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
 
-    border: 0;
+      border: 0;
 
-    & + button {
-      margin-left: 12px;
+      & + button {
+        margin-left: 12px;
+      }
     }
   }
 }
+

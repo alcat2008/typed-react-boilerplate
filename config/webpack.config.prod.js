@@ -214,7 +214,6 @@ module.exports = {
       },
       {
         test: /\.less/,
-        include: paths.appGlobalLess,
         loader: ExtractTextPlugin.extract(
           Object.assign(
             {
@@ -226,49 +225,6 @@ module.exports = {
                     importLoaders: 2,
                     minimize: true,
                     sourceMap: true,
-                  },
-                },
-                {
-                  loader: require.resolve('postcss-loader'),
-                  options: {
-                    ident: 'postcss', // https://webpack.js.org/guides/migrating/#complex-options
-                    plugins: () => [
-                      require('postcss-flexbugs-fixes'),
-                      autoprefixer({
-                        browsers: [
-                          '>1%',
-                          'last 4 versions',
-                          'Firefox ESR',
-                          'not ie < 9', // React doesn't support IE8 anyway
-                        ],
-                        flexbox: 'no-2009',
-                      }),
-                    ],
-                  },
-                },
-                require.resolve('less-loader'),
-              ],
-            },
-            extractTextPluginOptions
-          )
-        ),
-      },
-      {
-        test: /\.less/,
-        exclude: paths.appGlobalLess,
-        loader: ExtractTextPlugin.extract(
-          Object.assign(
-            {
-              fallback: require.resolve('style-loader'),
-              use: [
-                {
-                  loader: require.resolve('css-loader'),
-                  options: {
-                    importLoaders: 2,
-                    minimize: true,
-                    sourceMap: true,
-                    modules: true,
-                    localIdentName: '[name]_[local]_[hash:base64:3]',
                   },
                 },
                 {

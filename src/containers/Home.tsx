@@ -1,13 +1,13 @@
 /**
  * Created by alcat on 04/07/2017.
  */
-import React from 'react';
+import * as React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { increase, decrease, increaseAsync, increaseByRequest } from '../actions/count';
 
-import homeStyle from './home.less';
+import './home.less';
 
 // eslint-disable-next-line
 class Home extends React.Component<any, any> {
@@ -19,14 +19,14 @@ class Home extends React.Component<any, any> {
     const { number, actions } = this.props; // tslint:disable-line
     return (
       <div>
-        <div className={homeStyle.jump}>
+        <div className="home-jump">
           <Link to="/foo">Go to foo</Link>
         </div>
         <div>
           Some state changes:
-          <span className={homeStyle.count}>{number}</span>
+          <span className="home-count">{number}</span>
         </div>
-        <div className={homeStyle.operator}>
+        <div className="home-operator">
           <button className="btn-hover" onClick={() => actions.increase(1)}>Increase</button>
           <button className="btn-hover" onClick={() => actions.decrease(1)}>Decrease</button>
           <button className="btn-hover" onClick={() => actions.increaseAsync(1)}>Increase Async</button>

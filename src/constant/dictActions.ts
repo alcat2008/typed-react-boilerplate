@@ -10,3 +10,7 @@ export const AUTH_FAILED = 'AUTH_FAILED';
 
 export const INCREASE = 'INCREASE';
 export const DECREASE = 'DECREASE';
+
+// types
+export type INCREASE = typeof INCREASE;
+export type DECREASE = typeof DECREASE;

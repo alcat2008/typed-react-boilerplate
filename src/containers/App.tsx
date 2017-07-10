@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
 import { Header, Footer } from '../components';
 
-import appStyle from './app.less';
+import './app.less';
 
 export class App extends React.Component {
   render() {
@@ -11,7 +11,7 @@ export class App extends React.Component {
     return (
       <div>
         <Header {...restProps} />
-        <div className={appStyle.content}>{children}</div>
+        <div className="app-content">{children}</div>
         <Footer />
       </div>
     );

@@ -1,4 +1,5 @@
-import React from 'react';
+import * as React from 'react';
+import './footer.less';
 
 class Footer extends React.PureComponent<any, any> {
   render() {
