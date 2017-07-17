@@ -10,10 +10,10 @@ ReactDOM.render(
 );
 
 if (__DEV__) {
-  // const Perf = require('react-addons-perf');
+  const Perf = require('react-addons-perf');
 
   (window as any).React = React;
-  // (window as any).Perf = Perf;
+  (window as any).Perf = Perf;
 }
 
 registerServiceWorker();
