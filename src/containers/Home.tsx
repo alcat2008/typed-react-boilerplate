@@ -9,8 +9,13 @@ import { increase, decrease, increaseAsync, increaseByRequest } from '../actions
 
 import './home.less';
 
+interface HomeProps {
+  number: string;
+  actions: any;
+}
+
 // eslint-disable-next-line
-class Home extends React.Component<any, any> {
+class Home extends React.Component<HomeProps, any> {
   static propTypes = {
     number: React.PropTypes.number,
   };
